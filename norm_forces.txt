@@ -1,0 +1,23 @@
+88, At max LOS, 88 FlaK (under Mission Cover), S: Yes, V: Yes, 1A 4A 6A 1B
+AT Gun, At max LOS, 75mm AT (PaK40) (under Mission Cover), S: No, V: Yes, 4A 6A 7A 4B 6B 7B
+Base of Fire, At max LOS, LMG Team (without cover), S: Yes, V: Yes, CAt
+Command Post, Same card, Infantry Squad + Leader (under Bunker), S: No, V: Yes, 1A 2A 3A 4A 5A
+Defensive Position +, Adjacent card, Infantry Squad (under Mission Cover) / Infantry Squad + Leader (under Mission Cover) , S: No, V: Yes, 1A 2A 3A 4A 5A 6A 7A
+Defensive Position, Adjacent card, Infantry Squad (under Mission Cover) / Infantry Squad (under Mission Cover), S: No, V: Yes, 1A 2A 3A 4A 5A 6A 7A
+HMG Nest, At max LOS, Squad (under Mission Cover) / HMG (under Foxholes), S: Yes, V: Yes, 1A 2Ad 3Ad 5Ad 4A 6A 7A 1Bd 2Bd 4B 1C 2C 4C 6C 7C 
+Illumination + LMG Nest, At max LOS, Mortar Illumination + LMG Team (under Mission Cover), S: Yes, V: Yes, 3Bd 5Bd 3C 5C
+Illumination + Patrol, At max LOS, Mortar Illumination + Infantry Squad (with Exposed marker), Spoted: Yes, V: No, 3B 5Bd 3C 5C
+Incoming Artillery, At max LOS, Incoming marker (NCM = -4) + Arty FO Spotter (105 mm) (under Mission Cover), S: No, V: Yes, 1B 2B 3B 4B 5B 6B 1Cd 2C 3C 5C 4C 6C 7C CA
+Incoming Mortars, At max LOS, Incoming marker (NCM = -3) + Mtr FO Spotter (81 mm) (under Mission Cover), S: No, V: Yes, 1B 2Bd 3Bd 4Bd 5Bd 6B 7Bd 1Cd 2Cd 3Cd 4Cd 5Cd 6Cd 7Cd CAd
+Infantry Gun, At max LOS, 75mm Infantry Gun (under Mission Cover), S: Yes, V: Yes, 4A 6A 7A
+LMG Nest, Same card, LMG Team (under Foxholes), S: No, V: Yes, 1A 2A 3A 5A 6Ad 7A 1B 2Bd 3B 4B 6Bd 7Bt 1C 2Cd 3C 4Cd 5C 6Cd 7Cd
+Maneuver, At max LOS, Infantry Squad (infiltration attempt), S: Yes, V: No, 1A 2A 3A 5A 6A 7A 2B 2C CAq
+Mines + HMG Nest, At max LOS, Mines + HMG Team (under Foxholes), S: Yes, V: Yes, 1B 4B 1C 4C 6C 7C
+Mines + Sniper, At max LOS, Sniper (under Terrain Cover), S: No, V: Yes, 4B 1C C4 6C 7C
+Mines!, Same card, Mines, S: Yes, V: Yes, 3Bd 4B 5Bd 6B 7B 1C 3Cd 4C 5Cd 6C 7C
+Mortar Position, At max LOS, LMG Team + 81mm Mortar Section (under Foxholes), S: No, V: Yes, 2A 3A 4A 5A
+Mortar Team, At max LOS, 81 Mortar Team (under Foxholes), S: No, V: Yes, 6A 7A 1B 6B 7B
+Panzerschreck Team, At max LOS, Panzerschreck Team (under Mission Cover), S: No, V: Yes, 4A 7A 4B 6B 7B
+Patrol, At max LOS, Infantry Squad (with Exposed marker), S: Yes, V: No, 1A 2A 3A 5A 7A 2B 3B 5B 2C 3Cd 4C 5Cd 4C 6C 7C
+Sniper, At max LOS, Sniper (under Terrain Cover), S: No, V: Yes, 1A 1B 2B 6Bd 7B 1C 2Cd
+Strong Point, Adjacent card, Infantry Squad (under Trenches) / Infantry Squad + HMG (under Bunker), S: No, V: Yes, 1A 2A 3A 4A 5A 1B
