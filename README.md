@@ -6,5 +6,5 @@ Hostile forces creator for Fields of Fire. It determines composition and placeme
 
 ## Deployment
 
-# Single py file, doesn't need any packages to run, made with CPython 3.7
-# Forces list is included with norm_forces.txt available in repository
+### Single py file, doesn't need any packages to run, made with CPython 3.7
+### Forces list is included with norm_forces.txt available in repository
