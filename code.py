@@ -1,6 +1,3 @@
-'''
-Hostile forces creator for Fields of Fire. It determines composition and placement of enemy forces
-
 # displays full information about enemy force
 def display(mission, pc_category, force_dictionary):
     mission_frame_center = "| Mission {} |".format(mission)
@@ -67,7 +64,7 @@ def force_list_creator(mission, pc_category):
                         force_list.append(force)
     return force_list
 
-# prompts user 
+# checks with user if any card (apart from friendly unit's card) is available for hostile force
 def same_card_decision():
     while True:
         try:
@@ -78,7 +75,8 @@ def same_card_decision():
             break
         except ValueError:
             print("Invalid input, enter [y]es or [n]o")
-            
+
+# creates list of forces which are available for same card placement (e.g. mines, snipers, or exceptionally well-hidden machine guns)           
 def same_card_list_creator(force_list):
     new_list = []
     for index in range(len(force_list)):
@@ -88,6 +86,7 @@ def same_card_list_creator(force_list):
         print("Same card forces are not available for this potential contact category")
     return new_list
 
+# randomly chooses force from force list
 def random_force(force_list):
     import random
     force = random.choice(force_list)
@@ -105,7 +104,8 @@ def force_info_breakdown(force):
     spotted = force[3]
     global vof_generated
     vof_generated = force[4]
-    
+
+# validates randomly chosen force with user's input
 def force_selector(force_list):
     force = random_force(force_list)
     while True:
@@ -123,16 +123,19 @@ def force_selector(force_list):
         except ValueError:
             print("\nInvalid input, You must enter [y]es or [n]o")
 
+# randomly choses direction in which the enemy force appears (arguments are weights for each direction)
 def placement_list_creator(pp=2, f=4, l=2, r=2):
     packed_placements = [pp*["Per package"], f*["Front at max LOS"], l*["Left front at max LOS"], r*["Right front at max LOS"]]
     placement_list = sum(packed_placements, [])
     return placement_list
-                                  
+
+# randomly choses direction for palcement_list
 def random_placement(placement_list):
     import random
     placement = random.choice(placement_list)
     return placement
 
+# eliminates "used" direction in case when there two units and they appear in different directions
 def placement_remover(placement, placement_list):
     new_placement_list = []
     for index in range(len(placement_list)):
@@ -140,6 +143,7 @@ def placement_remover(placement, placement_list):
             new_placement_list.append(placement_list[index])
     return new_placement_list
 
+# validates direction with user's input
 def placement_decision(placement, same_card_decl):
     while True:
         if same_card_decl == "y":
@@ -153,6 +157,7 @@ def placement_decision(placement, same_card_decl):
         except ValueError:
             print("\nInvalid input. You must enter [y]es or [n]o")
 
+# the main function which determines direction and distance of enemy force
 def placement_selector(force, same_card_decl, per_package_distance, placement_list):
     if same_card_decl == "y" or force_name == "Mines!":         # mines are always placed on the same card as triggering unit
         placement = per_package_distance
@@ -186,7 +191,7 @@ def placement_selector(force, same_card_decl, per_package_distance, placement_li
                         placement_list = placement_remover(placement, placement_list)
                         return placement, placement_list
             
-
+# creates dictionary with force details
 def force_details_compiler(force_name, placement, units, spotted, vof_generated):
     global force_dictionary
     spotted = spotted.strip("S: ")
@@ -194,6 +199,7 @@ def force_details_compiler(force_name, placement, units, spotted, vof_generated)
     units = mission_cover_determination(units)
     force_dictionary = {"Force name":force_name, "Unit/s":units, "Placement":placement, "Spotted":spotted, "VoF generated":vof_generated}
 
+# determines default cover for a given mission
 def mission_cover_determination(units):
     if "Mission Cover" in units:
         if mission == 1:
