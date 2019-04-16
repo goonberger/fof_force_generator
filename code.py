@@ -1,5 +1,7 @@
+'''
+Hostile forces creator for Fields of Fire. It determines composition and placement of enemy forces
 
-
+# displays full information about enemy force
 def display(mission, pc_category, force_dictionary):
     mission_frame_center = "| Mission {} |".format(mission)
     print(len(mission_frame_center)*"-")
@@ -11,7 +13,8 @@ def display(mission, pc_category, force_dictionary):
     for key, details in force_dictionary.items():
         print("{}: {}".format(key, details))
     print()
-        
+
+# selects mission number based on user's input
 def mission_decision():
     while True:
         global mission
@@ -30,7 +33,8 @@ def farewell_message():
     print(22*"-")
     print("|{:^20s}|".format("See you later!"))
     print(22*"-")
-    
+
+# selects potential contact category based on user's input  
 def pc_category_decision(mission):
     while True:
         try:
@@ -42,6 +46,7 @@ def pc_category_decision(mission):
         except ValueError:
             print("\nInvalid input, You must enter potential contact category (A, B, C or CA) or 'q'")
 
+# builds list of enemy forces available for specific mission and specific potential contact category
 def force_list_creator(mission, pc_category):
     force_list = []
     with open("norm_forces.txt", "r") as norm_forces:
@@ -61,7 +66,8 @@ def force_list_creator(mission, pc_category):
                         force_list.append(force)
                         force_list.append(force)
     return force_list
-    
+
+# prompts user 
 def same_card_decision():
     while True:
         try:
